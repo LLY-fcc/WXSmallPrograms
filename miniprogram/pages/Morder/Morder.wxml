@@ -1,0 +1,69 @@
+<!--miniprogram/pages/Morder/Morder.wxml-->
+<view class="container">
+  <navbar class="navTab" showNav="{{showNav}}" bg-color="#000" page-name="个人信息" />
+  <view class="tabBar">
+    <view class="nav {{isCurrent == 1?'border':''}}"  bindtap="navZero">待接单</view><view  class="nav {{isCurrent == 2?'border':''}}" bindtap="navOne">已接单</view><view class="nav {{isCurrent == 3?'border':''}}" bindtap="navTwo">已退单</view><view class="nav {{isCurrent == 4?'border':''}}" bindtap="navThree">已制作</view>
+  </view>
+  <view class="content">
+    <view wx:if="{{hasorder}}">
+      <view wx:if="{{orderstatus == 0}}">
+        <view class="ordershow" wx:for="{{orders}}" wx:key="{{index}}">
+          <view class="show">订单状态：{{item.order_status}}</view>
+          <view class="show">顾客姓名：{{item.user_name}}</view>
+          <view class="show">顾客手机：{{item.user_phone}}</view>
+          <view class="show">下单时间：{{item.order_date}}</view>
+          <view class="show">文件数量：{{item.file_num}}</view>
+          <view class="show">图片数量：{{item.img_num}}</view>
+          <view class="show">打印金额：{{item.price}}</view>
+          <view class="show">订单备注：<text>{{item.order_comment}}</text></view>
+          <view class="operation">
+            <button size="mini" disabled="{{hasAgree}}" data-index="{{index}}" bindtap="onAgree">{{des_0_0}}</button>
+            <button size="mini" disabled="{{hasAgree}}" data-index="{{index}}" bindtap="onDisagree">{{des_0_1}}</button>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{orderstatus == 1}}">
+        <view class="ordershow"  wx:for="{{makeorders}}" wx:key="{{index}}">
+          <view class="show">订单状态：{{item.order_status}}</view>
+          <view class="show">顾客姓名：{{item.user_name}}</view>
+          <view class="show">顾客手机：{{item.user_phone}}</view>
+          <view class="show">下单时间：{{item.order_date}}</view>
+          <view class="show">文件数量：{{item.file_num}}</view>
+          <view class="show">图片数量：{{item.img_num}}</view>
+          <view class="show">打印金额：{{item.price}}</view>
+          <view class="show">订单备注：<text>{{item.order_comment}}</text></view>
+          <view class="operation">
+            <button size="mini" disable="{{hasMake}}" data-index="{{index}}" bindtap="onMake">{{des_1_0}}</button>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{orderstatus == 2}}">
+        <view class="ordershow"  wx:for="{{disorders}}" wx:key="{{index}}">
+          <view class="show">订单状态：{{item.order_status}}</view>
+          <view class="show">顾客姓名：{{item.user_name}}</view>
+          <view class="show">顾客手机：{{item.user_phone}}</view>
+          <view class="show">下单时间：{{item.order_date}}</view>
+          <view class="show">文件数量：{{item.file_num}}</view>
+          <view class="show">图片数量：{{item.img_num}}</view>
+          <view class="show">打印金额：{{item.price}}</view>
+          <view class="show">订单备注：<text>{{item.order_comment}}</text></view>
+        </view>
+      </view>
+      <view wx:if="{{orderstatus == 3}}">
+        <view class="ordershow"  wx:for="{{madeorders}}" wx:key="{{index}}">
+          <view class="show">订单状态：{{item.order_status}}</view>
+          <view class="show">顾客姓名：{{item.user_name}}</view>
+          <view class="show">顾客手机：{{item.user_phone}}</view>
+          <view class="show">下单时间：{{item.order_date}}</view>
+          <view class="show">文件数量：{{item.file_num}}</view>
+          <view class="show">图片数量：{{item.img_num}}</view>
+          <view class="show">打印金额：{{item.price}}</view>
+          <view class="show">订单备注：<text>{{item.order_comment}}</text></view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{!hasorder}}">
+      <text>暂无订单</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,60 @@
+<!--pages/orderpage/orderpage.wxml-->
+<view class="container">
+  <navbar class="navTab" showNav="{{showNav}}" bg-color="#000" page-name="订单创建" />
+<block>
+  <view class="orderform">
+    <view class="file">
+      <view class="des"><text>文件上传</text><view class="counter">{{fileLists.length}}/50</view></view>
+      <view class="show">
+        <view class="fileShow" wx:for="{{fileLists}}" wx:key="{{index}}">
+          <text class="fileDes" data-index="{{index}}">{{index+1}}、{{item.name}}</text>
+          <icon class="clear clearFile" data-index="{{index}}" bindtap="ondelFile" type="clear" size="20" color="red"/>
+        </view>
+        <view class="icon_add iconfont icon-add-bold add_a" bindtap="onuploadFiles"></view>
+      </view>
+    </view>
+    <view class="img">
+      <view class="des"><text>图片上传</text><view class="counter">{{imgLists.length}}/9</view></view>
+      <view class="show">
+        <view class="imgShow" wx:for="{{imgLists}}" wx:key="{{index}}">
+          <image data-index="{{index}}" src="{{item}}" bindtap="onpreviewImage"></image>
+          <icon class="clear" data-index="{{index}}" bindtap="ondelImg" type="clear" size="20" color="red"/>
+        </view>
+        <view class="icon_add iconfont icon-add-bold add_b" bindtap="onuploadImages" wx:if="{{imgLists.length < 9}}"></view>
+      </view>
+    </view>
+    <view class="comment">
+      <view class="des"><text>备注</text></view>
+      <textarea class="comment_content" bindblur="setComment" placeholder="请在这里备注您的特殊要求" />
+    </view>
+    <view class="price_counter">
+      <view class="des"><text>打印面数</text><view class="price_counter_number"><stepper bindstepper="onbindStepper" /></view></view>
+      <view class="des"><text>总价</text><view class="price_counter_total_price">￥{{price}}</view></view>
+    </view>
+    <view class="submit">
+      <button type="primary" class="submit_button" bindtap="onorderSubmit">提交订单</button>
+    </view>
+  </view>
+</block>
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view class="commodity_attr_box" animation="{{animationData}}" wx:if="{{showModalStatus}}">
+  <view class="trademark">
+    <image class="trademark_image" src="{{trademark_image_url}}"></image>
+    <view class="trademark_des">
+      <text class="trademark_des_name t_d">INT打印</text>
+      <text class="trademark_des_detail t_d">￥0.2/面</text>
+    </view>
+  </view>
+  <view class="order_address">
+    <radio-group bindchange="radioChange">
+    <view class="order_address_select" wx:if="{{hasUserInfo}}" wx:for="{{userInfo}}" wx:index="index">
+      <radio value="{{index}}">{{item.username}}-{{item.address}}-{{item.userphone}}</radio>
+    </view>
+    </radio-group>
+    <view class="order_address_add" wx:if="{{!hasUserInfo}}">
+      <button bindtap="gotoAddAddress">添加地址</button>
+    </view>
+  </view>
+  <view class="paynow" bindtap="PAY">立即下单</view>
+</view>
+</view>

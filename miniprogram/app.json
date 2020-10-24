@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/orderpage/orderpage",
+    "pages/useraddress/useraddress",
+    "pages/userorder/userorder",
+    "pages/Morder/Morder",
+    "pages/des/des",
+    "pages/advertising/advertising"
+  ],
+  "entryPagePath": "pages/advertising/advertising",
+  "resizable": true,
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0FF",
+    "navigationBarTitleText": "INT 打印",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#6CBDFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_image/tabpage/shouye.png",
+        "selectedIconPath": "images/icon_image/tabpage/shouye_3.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/icon_image/tabpage/gerenzhongxin.png",
+        "selectedIconPath": "images/icon_image/tabpage/gerenzhongxin_3.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

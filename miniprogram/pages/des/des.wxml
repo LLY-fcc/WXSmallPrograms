@@ -1,0 +1,18 @@
+<!--miniprogram/pages/des/des.wxml-->
+<view class="container">
+  <navbar class="navTab" showNav="{{showNav}}" bg-color="#000" page-name="服务通知" />
+  <view class="title">欢迎使用INT系列产品!</view>
+  <view class="content">
+    <text>一、本小程序为第一代版本，开发者为个人开发者，无法挑起微信在线支付。</text>
+    <text>二、小程序在运行过程中不会获取任何您的隐私信息，请放心使用。</text>
+    <text>三、若您在使用过程中发现了任何问题，请联系我<text style="text-indent:2em;">手机：15804213643</text><text style="text-indent:2em;">QQ：1852982339</text><text style="text-indent:2em;">微信：Yu1852982339</text>我们一定会及时改进，为您创造最好的用户体验</text>
+    <text>四、关于服务时间。开发者为学生，平时会有一些课程，您下单的最佳时间为每日的
+      <text style="text-indent:2em;">上午： 6:00-9:30</text>
+      <text style="text-indent:2em;">中午： 12:30-1:20</text>
+      <text style="text-indent:2em;">下午： 7:00-11:00</text>
+    </text>
+    <text>五、若您的订单比较着急，请在备注中说明，尽量在上述时间段进行下单。为了方便用户，下单页面的文件选择为在聊天记录中选择；图片可以上传、可以拍摄！</text>
+    <text>六、注意！仅仅支持灰色打印、可以复印，复印请随便选择一张图片并备注!!!</text>
+    
+  </view>
+</view>

@@ -1,0 +1,13 @@
+/* miniprogram/pages/des/des.wxss */
+.title {
+  font-size: large;
+  font-weight: 600;
+}
+.content {
+  width: 90%
+}
+.content text {
+  display: block;
+  width: 100%;
+  margin: 10px 0
+}

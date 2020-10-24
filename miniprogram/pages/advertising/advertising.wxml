@@ -1,0 +1,13 @@
+<!--miniprogram/pages/advertising/advertising.wxml-->
+<!--pages/advertising/advertising.wxml-->
+<view class='main'>
+<view class='adv1'>
+  <image src='../../images/ad/haibao.png' bindtap="imgClick" class='adv-img'></image>
+  <text class='tiaoguo' bindtap='cliadv'>跳过广告 {{miao}}</text>
+</view>
+<view class="adv2">
+  <button>INT 打印</button>
+  <text class='text2'>{{adv_text}}</text>
+</view>
+</view>
+

@@ -1,0 +1,25 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <navbar class="navTab" showNav="{{showNav}}" bg-color="#000" page-name="INT" />
+ <view class='bannerWrap'>
+    <swiper class='bannerSwiper'autoplay="true" previous-margin="54rpx" next-margin='54rpx' indicator-dots="true" indicator-color='#B5B5B5' indicator-active-color='#fff' interval='3000' duration='500' bindchange='' circular='true'>
+      <block wx:for="{{banner}}">
+        <swiper-item>
+          <image class="{{index==xindex?'imageBanner':'imageBanner_small'}}" src="{{item}}" bindtap='imageClick'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="title">商家列表</view>
+  <view class=" broadcast .iconfont_2">
+    <view class="icon-laba"><text>{{broadcast}}</text></view>
+  </view>
+  <block wx:if="{{!isSuper}}">
+    <view class="wrapper" bindtap="turnto" wx:for="{{merchant_lists}}" wx:key="{{index}}">
+      <text class="shop_name">{{item.name}}</text>
+      <text class="shop_address">{{item.address}}</text>
+      <view class="iconfont .icon-arrow-right-bold icon_right"></view>
+    </view>
+  </block>
+  <button open-type="contact" size="mini" style="width: 40px;height: 65px;text-align:center" class="customer_message" >客服</button>
+</view>

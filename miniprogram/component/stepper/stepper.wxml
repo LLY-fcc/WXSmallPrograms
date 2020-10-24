@@ -1,0 +1,9 @@
+<!--pages/component/stepper/stepper.wxml-->
+<view class="stepper">
+  <!--减号-->
+  <text class="{{minusStatus}}" bindtap="onbindMinus">-</text>
+  <!--数值-->
+  <input type="number" bindchange="onbindManual" value="{{num}}" />
+  <!--加号-->
+  <text class="normal" bindtap="onbindPlus">+</text>
+</view>

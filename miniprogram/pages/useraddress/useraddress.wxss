@@ -1,0 +1,50 @@
+/* miniprogram/pages/useraddress/useraddress.wxss */
+.address_info,.address_add {
+  background-color: rgba(218,188,246,0.5);
+  display: block;
+  margin-top: 50rpx;
+  padding: 10rpx;
+  width: 90%
+}
+/*描述信息*/
+.des {
+  width: 100%;
+  height: 32px;
+  border-bottom: 1px solid #B8B8B8;
+  text-align: center;
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.addinfo {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  overflow: hidden;
+}
+.addinfo text {
+  width: 64px;
+  float: left;
+}
+.tip text{
+  color: red;
+  float: none;
+}
+.addinfo input {
+  width: 100px;
+  float: left;
+}
+.address {
+  overflow: visible;
+}
+.address_in text {
+  width: 85%;
+  float: none
+}
+.address select {
+  display: inline-block;
+  width: 120px;
+}
+.addinfo + .addinfo {
+  border-top: 1px solid #B8B8B8;
+}

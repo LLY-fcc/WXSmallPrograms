@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <navbar class="navTab" showNav="{{showNav}}" bg-color="#000" page-name="个人中心" />
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="userorder" bindtap="turntoaddress">
+    <text>个人信息</text>
+    <text class="iconfont .icon-arrow-right-bold mark"></text>
+  </view>
+  <view class="userorder" bindtap="turntoorder">
+    <text>个人订单</text>
+    <text class="iconfont .icon-arrow-right-bold mark"></text>
+  </view>
+  <block wx:if="{{isSuper}}">
+    <view class="userorder" bindtap="turntoMorder">
+      <text>商家订单</text>
+      <text class="iconfont .icon-arrow-right-bold mark"></text>
+    </view>
+  </block>
+  <view class="usermotto">
+    <text class="user-motto">欢迎来到INT打印室</text>
+  </view>
+  <button open-type="contact" size="mini" style="width: 40px;height: 65px;text-align:center" class="customer_message" >客服</button>
+</view>

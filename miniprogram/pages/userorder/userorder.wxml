@@ -1,0 +1,31 @@
+<!--miniprogram/pages/userorder/userorder.wxml-->
+<view class="container">
+  <navbar class="navTab" showNav="{{showNav}}" bg-color="#000" page-name="个人订单" />
+  <view class="tabBar"><view  class="nav {{isCurrent == 1? 'border':'' }}" bindtap="navOne">当前订单</view><view class="nav {{isCurrent == 2? 'border':'' }}"bindtap="navTwo">历史订单</view></view>
+  <block wx:if="{{pageindex == 1}}">
+  <view class="hisOrderShow" wx:if="{{hasOrder}}" wx:for="{{owenOrder}}" wx:key="{{index}}">
+    <view><text>订单状态：{{item.order_status}}</text></view>
+    <view class="" ><text>下单时间：{{item.order_date}}</text></view>
+    <view><text>订单编号：{{item.order_serial_number}}</text></view>
+    <view><text>文件数量：{{item.order_sum}}</text></view>
+    <view><text>打印面数：{{item.print_num}}</text></view>
+    <view><text>打印总价：￥{{item.price}}</text></view>
+  </view>
+  <view class="whenNone" wx:if="{{!hasOrder}}">
+    <text>当前无订单哟</text>
+  </view>
+  </block>
+  <block wx:if="{{pageindex == 2}}">
+  <view class="hisOrderShow" wx:if="{{hasHisOrder}}" wx:for="{{owenHisOrder}}" wx:key="{{index}}">
+    <view><text>订单状态：{{item.order_status}}</text></view>
+    <view class="" ><text>下单时间：{{item.order_date}}</text></view>
+    <view><text>订单编号：{{item.order_serial_number}}</text></view>
+    <view><text>文件数量：{{item.order_sum}}</text></view>
+    <view><text>打印面数：{{item.print_num}}</text></view>
+    <view><text>打印总价：￥{{item.price}}</text></view>
+  </view>
+  <view class="whenNone" wx:if="{{!hasHisOrder}}">
+    <text>无历史订单</text>
+  </view>
+  </block>
+</view>

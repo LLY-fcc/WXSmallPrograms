@@ -1,0 +1,32 @@
+<view class="container">
+  <navbar class="navTab" showNav="{{showNav}}" bg-color="#000" page-name="个人信息" />
+  <view class="address_info">
+    <view class="address_show" wx:if="{{hasAddressInfo}}">
+        <view class="name"><text>姓名：{{_userInfo.username}}</text></view>
+        <view class="phone"><text>电话： {{_userInfo.userphone}}</text></view>
+        <view class="address"><text>地址：{{_userInfo.address}}</text></view>
+    </view>
+    <view class="address_add" wx:else>
+        <view class="des"><text>填写地址信息</text></view>
+        <view class="name addinfo">
+          <text>姓名：</text><input placeholder="请输入姓名" catchblur="nameTest" class="name_in" />
+        </view>
+        <view class="phone addinfo">
+          <text>电话：</text><input placeholder="请输入手机" type="number" catchblur="phoneTest" class="phone_in" />
+        </view>
+        <view class="Vcode addinfo">
+          <text>验证码：</text>
+          <input placeholder="验证码" type="number" catchblur="vcodeTest" />
+          <button style="width: 120px;font-weight:100;float:left" size="mini" disabled="{{isDisabled}}" bindtap="sendVCode" class="sendButton">{{button}}</button>
+        </view>
+        <view class="address addinfo">
+          <text>地址：</text>
+          <select options="{{options}}" key="dormitory_id" text="dormitory_name" class="address_in" bind:change="onselectChange" />
+        </view>
+        <view class="address addinfo tip" wx:if="{{hasissue}}">
+          <text>TIPS：  {{tips}}</text>
+        </view>
+        <view class="submit"><button bindtap="onsubmit">提交</button></view>
+    </view>
+  </view>
+</view>

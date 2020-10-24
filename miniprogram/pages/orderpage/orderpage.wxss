@@ -1,0 +1,197 @@
+/* pages/orderpage/orderpage.wxss */
+/*
+ *author:LiangLiang Yu
+ *description:
+ *update:
+ */
+/*iconfont.css*/
+.file,.img,.content {
+  margin: 10px 0
+}
+.icon_add {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+.add_b {
+  margin-top: 5px;
+}
+/*global.css*/
+.orderform {
+  width: 92%
+}
+.imgShow {
+  position:relative;
+  display:inline-block;
+  width: 60px;
+  height: 60px;
+  margin-right: 1px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle
+}
+.fileShow {
+  margin: 8px 0;
+  position:relative;
+  width:100%
+}
+/*控制图片大小*/
+.imgShow > image {
+  width: 100%;
+  height: 100%
+}
+/*控制文件上传的显示*/
+.fileDes {
+  display: block;
+}
+.clear {
+  position:absolute;
+  top: -5px;
+  right: -5px
+}
+.clearFile {
+  top: 0;
+  right: 5px
+}
+
+/*控制两个展示区域的上边距*/
+.show {
+  width: 94%;
+  margin: 10px 0 0 1em
+}
+/*计数器的位置*/
+.price_counter {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  line-height: 32px
+}
+/*计数器标题*/
+.des {
+  background-image: linear-gradient(to right,rgba(204,251,255,0.3) 50%,rgba(239,150,197,0.5) 100%);
+  position:relative;
+  font-size: 20px;
+  font-weight: 600;
+}
+.price_counter {
+  margin: 10px 0;
+}
+.counter {
+  display:inline-block;
+  position:absolute;
+  right: 0
+}
+.price_counter_number {
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  vertical-align: middle
+}
+/*备注样式*/
+.comment textarea {
+  width: 80%;
+  margin-left: 2em;
+  background: rgba(0,0,0,0.1);
+}
+/*总价的位置*/
+.price_counter_total_price {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  width: 50px
+} 
+/*提交按钮的位置
+.submit_button {
+  
+}
+*/
+.submit {
+  margin-bottom: 100px;
+}
+/*屏幕底部弹窗*/
+  /*屏幕变暗*/
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff
+}
+  /*底部对话框*/
+.commodity_attr_box {
+  position: fixed;
+  bottom: 0;
+  left: o;
+  height: 800rpx;
+  width: 100%;
+  padding-top: 20rpx;
+  overflow: hidden;
+  z-index: 2000;
+  background: linear-gradient(45deg,rgba(234,214,238,0.8) 10%,rgba(242,245,208,1) 20%,rgba(234,229,201,1) 20%,rgba(108,198,203,0.8) 10%,rgba(160,241,234,0.8) 20%)
+}
+    /*底部对话框内容样式*/
+.trademark {
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  overflow: hidden;
+  border-bottom: 1px solid #E5E5E5;
+}
+      /*商标图片*/
+.trademark_image {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  float: left
+}
+.trademark_des{
+  position: relative;
+  width: 80px;
+  height: 50px;
+  float: left
+}
+.t_d {
+  display: block;
+  position: absolute;
+  height: 25px;
+  width: 80%;
+  overflow: hidden;
+  text-align: center;
+  line-height: 30px;
+}
+.trademark_des_name {
+  top: 0;
+  left: 1px
+}
+.trademark_des_detail {
+  top: 25px;
+  left: 0
+}
+.order_address {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+.paynow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 39px;
+  border-top: 1px solid #E5E5E5;
+  font-weight: 600;
+  text-align: center;
+  line-height: 39px;
+  background: linear-gradient(to right,rgba(12,123,179,0.6) 30%,rgba(242,186,232,0.6) 70%)
+}
+.paynow:active {
+  opacity: 0.5;
+}

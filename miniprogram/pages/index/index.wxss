@@ -1,0 +1,77 @@
+/* pages/index/index.wxss */
+/*global.css*/
+/*备用图片
+*url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1603254967572&di=98a3861486b19f2c224b8071946976b0&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201312%2F27%2F20131227130415_AXs48.thumb.700_0.jpeg)    底部导航颜色#D5CAA8*/
+/*顶部导航*/
+page {
+  color: #fff
+}
+.nav {
+  width: 100%
+}
+.title {
+  width: 90%;
+  border-bottom: 1px solid #ECECEC;
+  margin: 10px 0;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.wrapper {
+  background-image: linear-gradient(to right, rgba(59,65,197,0.5) 0%, rgba(169,129,187,0.5) 49%, rgba(255,200,169,0.5) 100%);
+  position: relative;
+  width: 90%;
+  height: 240rpx;
+  border: 1px solid black;
+  border-radius: 20rpx;
+}
+.shop_name {
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx
+}
+.shop_address {
+  position: absolute;
+  bottom: 10rpx;
+  left: 10rpx
+}
+.icon_right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50rpx;
+  font-family: "iconfont" !important;
+  font-size: x-large;
+}
+/*轮播图*/
+.bannerWrap{
+  width: 100%;
+}
+.imageBanner {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+ 
+.imageBanner_small {
+  width: 94%;
+  height: 90%;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  position: absolute;
+  bottom: 0;
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx; 
+ 
+}
+.broadcast {
+  width: 74%;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.8)
+}
+.broadcast text {
+  padding-left: 1.5em;
+}
+

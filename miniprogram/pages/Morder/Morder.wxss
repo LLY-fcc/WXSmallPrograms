@@ -1,0 +1,23 @@
+/* miniprogram/pages/Morder/Morder.wxss */
+.tabBar {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+.nav {
+  float: left;
+  width: 24.6%;
+  height: 29px;
+  line-height: 29px;
+  text-align: center
+}
+.border {
+  border-bottom: 2px solid #0DF;
+}
+.ordershow {
+  width: 90%;
+  margin-top: 20rpx;
+  border: 1px solid #000;
+  border-radius: 20rpx;
+  background: linear-gradient(30deg,rgba(234,214,238,0.6) 40%,rgba(160,241,234,0.6) 60%);
+}

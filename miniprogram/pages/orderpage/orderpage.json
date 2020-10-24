@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar": "../../component/navbar/navbar",
+    "stepper": "../../component/stepper/stepper",
+    "select": "../../component/select/select"
+  }
+}

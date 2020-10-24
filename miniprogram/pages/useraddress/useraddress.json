@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "select": "../../component/select/select",
+    "navbar": "../../component/navbar/navbar"
+  },
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,53 @@
+/**index.wxss**/
+.userinfo {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  font-size: large;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  margin-top: 150px;
+  background-image: -webkit-linear-gradient(left,rgba(0,0,255,0.3),rgba(102,255,255,0.3) 10%,rgba(204,0,255,0.3) 20%,rgba(204,0,204,0.5) 30%, rgba(204,204,255,0.5) 40%, rgba(0,255,255,0.5) 50%,rgba(204,204,255,0.5) 60%,rgba(204,0,204,0.5) 70%,rgba(204,0,255,0.3) 80%,rgba(102,255,255,0.5) 90%,rgba(0,0,255,0.3) 100%);
+  background-clip: text;/* 裁剪背景图，使文字作为裁剪区域向外裁剪 */
+  background-size: 200% 100%; 
+  animation: masked-animation 4s linear infinite;
+}
+@keyframes masked-animation {
+  0% {
+      background-position: 0  0;
+  }
+  100% {
+      background-position: -100%  0;
+  }
+}
+/*收货地址导航*/
+.userorder {
+  background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  opacity: 0.6;
+  width: 70%;
+  height: 100rpx;
+  padding-left: 20rpx;
+  margin-top: 30rpx;
+  border: 1px solid #000;
+  border-radius: 15rpx;
+  line-height: 100rpx
+}
+.mark {
+  float: right;
+  font-size: 20px
+}
