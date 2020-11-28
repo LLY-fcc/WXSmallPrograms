@@ -7,8 +7,8 @@ cloud.init({
 const tencentcloud = require("./node_modules/tencentcloud-sdk-nodejs");
 //发送短信必要模块
 const Credential = tencentcloud.common.Credential;
-const secretId = "AKIDHpIWgLh1wa1C6johsQ2UFqGVN3YqmGgp"
-const secretKey = "xGLsAE3brsoVhcYzBXdWAXdV9YgYxGWW"
+const secretId = "***"
+const secretKey = "***"
   //传入id\key
 let cred = new Credential(secretId, secretKey);
 // 导入 SMS 模块的 client models
