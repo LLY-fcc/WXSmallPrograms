@@ -246,8 +246,7 @@ Page({
     //定义遮罩层动画
     var animation = wx.createAnimation({
       delay: 200,
-      timingFunction: "linear",
-      delay: 0
+      timingFunction: "linear"
     });
     this.animate = animation;
     animation.translateY(800).step();

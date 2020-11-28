@@ -129,7 +129,7 @@
 .commodity_attr_box {
   position: fixed;
   bottom: 0;
-  left: o;
+  left: 0;
   height: 800rpx;
   width: 100%;
   padding-top: 20rpx;

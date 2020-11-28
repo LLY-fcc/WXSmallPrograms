@@ -55,11 +55,13 @@ Page({
       env: 'int-print-env-3jd7g'
     });
     //调用云函数获取openid
-    var openid
     wx.cloud.callFunction({
       name: 'callback',
       success: (res) => {
-        openid = res.result.openid
+       let openid = res.result.openid;
+       this.setData({
+         openid: openid
+       })
       },
       fail: (err) => {
         console.log(err)
@@ -69,7 +71,7 @@ Page({
     var db = wx.cloud.database();
     const _ = db.command;
     db.collection('orderforms').where({
-      _openid: openid,
+      _openid: this.data.openid,
       order_status_tag: _.or('0','1')
     }).get({
       success: (res) => {
@@ -93,8 +95,8 @@ Page({
       }
     });
     db.collection('orderforms').where({
-      order_status_tag: _.or('2','3'),
-      _openid: openid
+      _openid: this.data.openid,
+      order_status_tag: _.or('2','3')
     }).get({
       success: (res) => {
         this.setData({

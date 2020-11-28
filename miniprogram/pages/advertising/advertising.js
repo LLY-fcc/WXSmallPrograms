@@ -28,14 +28,14 @@
       var that = this;
       var text = ['点击首页轮播图有惊喜！','有问题不要忘记咨询客服','从这一刻开启便捷生活','您的支持是我们最大的动力！','发现问题可以向我们反馈哟','Welcome to INT!','INT一定会更好哒！']
       this.time_2 = setInterval(function () {
-        var i = parseInt(Math.random()*8);
+        var i = parseInt(Math.random()*7);
         that.setData({
           adv_text: text[i]
         });
         if (that.data.miao == 0) {
           clearInterval(this.time_2);
         }
-      },2000)
+      },1500)
       this.time = setInterval(function () {
         that.setData({
           miao: that.data.miao-1
